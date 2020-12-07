@@ -11,46 +11,42 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 <%
-java.util.list<String> list = new java.util.ArrayList<>();
-list.add("java");
-list.add("jsp");
-list.add("spring");
-list.add("dbms");%>
-
-<ul>
-<%
-for (String item : list) {
+int i = 3;
 %>
-<li>
-<% out.print(item);%>
-</li>
+<!-- 자바코드 그대로 위치에 들어감 -->
+
+<h1>Lorem ipsum dolor.</h1>
 
 <%
-}
-%>
-
-</ul>
-
-<%
-boolean danger = false;
+out.write(i);
+out.print(i);
 %>
 
 <%
-if(danger) {
+out.print("<h1>");
+out.print("hello");
+out.print("</h1>");
 %>
-<h1 class = "text=danger"> DANGER!!!!</h1>
 
 <%
+out.print("<h2>");
+out.print(new java.util.Date());
+out.print("</h2>");
+%>
+
+<%
+if (i > 0) {
+ out.print("<h3>");
+ out.print("i가 0보다 크다");
+ out.print("</h3>");
 } else {
+ out.print("<h3>");
+ out.print("i가 0보다 작다");
+ out.print("</h3>");
+}
 %>
-<h1 class = "text-info"> INFO~~~~ </h1>
 
-<%
-}
-%>
-}
 
 </body>
 </html>
